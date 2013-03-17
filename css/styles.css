@@ -1,0 +1,93 @@
+/* ==========================================================================
+   base styles
+   ========================================================================== */
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+a {
+	color: #2C7DDC;
+}
+a:hover{
+	color: #FFF;
+}
+
+li{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ol, ul {
+	list-style: none;
+}
+
+#nav, #main-content{
+	margin: 5%;
+	clear: both;
+}
+
+#hero img{
+	width: 100%;
+}
+
+#nav{
+	padding: 0 0 20px;
+}
+
+#nav li{
+	width: 20%;
+	float: left;
+	margin-right: 4.2%;
+	background: #2C7DDC url('../images/knitting250px.png') 0 0 repeat-x;
+	text-align: center;
+	/* ========   	less	==============*/
+	border-radius: 10px;
+}
+#nav li a{
+	text-decoration: none;
+}
+
+
+/* ==========================================================================
+   footer
+   ========================================================================== */
+#footer {
+	background-image: url('../images/footer_bg.png');
+	width: 100%;
+	min-height: 150px;
+}
+
+/* ==========================================================================
+   Media query smaller than 750px and mobile
+   ========================================================================== */
+
+@media screen and (max-device-width: 750px), screen and (max-width: 750px){
+#nav li{
+	width: 44%;
+	float: left;
+	margin-right: 4.2%;
+	margin-bottom: 2%;
+	background: #2C7DDC url('../images/knitting250px.png') 0 0 repeat-x;
+	text-align: center;
+}
+
+}
+
+/* ==========================================================================
+   Media query smaller than 480px and mobile
+   ========================================================================== */
+
+@media screen and (max-device-width: 480px), screen and (max-width: 480px){
+#nav li{
+	width: 90%;
+	float: left;
+	margin-right: 4.2%;
+	margin-bottom: 2%;
+	background: #2C7DDC url('../images/knitting250px.png') 0 0 repeat-x;
+	text-align: center;
+}
+
+}
