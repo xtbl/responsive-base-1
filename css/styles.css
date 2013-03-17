@@ -29,7 +29,7 @@ a:hover{
 	transition: all 1s ease-out;
 }
 
-p {
+p, h1 {
 	color: #BEC4CC;
 }
 
@@ -48,8 +48,15 @@ ol, ul {
 
 #header {
 	text-align: center;
-	font-size: 140%;
+	font-size: 1.8em;
+	margin: 10px;
 }
+#header h1 {
+	margin: 2px;
+	padding: 1%;
+	color: #ccc;
+}
+
 #nav, #main-content{
 	margin: 5%;
 	clear: both;
@@ -67,12 +74,8 @@ ol, ul {
 	width: 20%;
 	float: left;
 	margin-right: 4.2%;
-	background: #2C7DDC url('../images/knitting250px.png') 0 0 repeat-x;
+	background: #2C7DDC url('../images/dark_fish_skin.png') 0 0 repeat;
 	text-align: center;
-/* ========   	less	==============*/
-	border-radius: 5px;
-	-webkit-box-shadow:  0px 2px 3px 2px #BEC4CC;
-	box-shadow:  0px 2px 3px 2px #BEC4CC;
 }
 #nav li a{
 	text-decoration: none;
@@ -95,20 +98,51 @@ ol, ul {
 	min-height: 150px;
 }
 
+#copyright {
+	text-align: center;
+}
+
+.gradient-a {
+	background-image: linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -o-linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -moz-linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -webkit-linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -ms-linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		right top,
+		color-stop(0.01, rgb(161,161,161)),
+		color-stop(0.52, rgb(26,25,26))
+	);
+}
+
+.round-shadow-a {
+/* ========   	less	==============*/
+	border-radius: 5px;
+	-webkit-box-shadow:  0px 2px 3px 2px #4f4d4d;
+	box-shadow:  0px 2px 3px 2px #4f4d4d;
+}
+.round-shadow-b {
+/* ========   	less	==============*/
+	border-radius: 5px;
+	-webkit-box-shadow:  0px 2px 5px 5px #4f4d4d;
+	box-shadow:  0px 2px 3px 5px #4f4d4d;
+}
 /* ==========================================================================
    Media query smaller than 750px and mobile
    ========================================================================== */
 
 @media screen and (max-device-width: 750px), screen and (max-width: 750px){
 #header {
-	font-size: 110%;
+	font-size: 1.1em;
 }
 #nav li{
 	width: 44%;
 	float: left;
 	margin-right: 4.2%;
 	margin-bottom: 2%;
-	background: #2C7DDC url('../images/knitting250px.png') 0 0 repeat-x;
 	text-align: center;
 }
 
@@ -119,16 +153,18 @@ ol, ul {
    ========================================================================== */
 
 @media screen and (max-device-width: 480px), screen and (max-width: 480px){
-#header {
-	font-size: 90%;
-}
-#nav li{
-	width: 90%;
-	float: left;
-	margin-right: 4.2%;
-	margin-bottom: 3%;
-	background: #2C7DDC url('../images/knitting250px.png') 0 0 repeat-x;
-	text-align: center;
-}
-
+	#header {
+		font-size: 0.9em;
+	}
+	#nav li{
+		width: 90%;
+		max-height: 40px;
+		float: left;
+		margin-right: 4.2%;
+		margin-bottom: 3%;
+		text-align: center;
+	}
+	#nav li h2 {
+		margin: 0;
+	}
 }
