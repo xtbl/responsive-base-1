@@ -1,0 +1,211 @@
+/* ==========================================================================
+   Cristobal Avila D.
+   Responsive Fish
+   2013
+   ========================================================================== */
+
+/* ==========================================================================
+   less variables and mixins
+   ========================================================================== */
+@link_color: #2C7DDC;
+@link_color_hover: #FFF;
+@basic_text_color: #BEC4CC;
+
+.hover_transition{
+	-webkit-transition: all 1s ease-out;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-timing-function: ease-out;
+	-webkit-transition-delay: initial;
+	-moz-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+}
+.border-radius (@radius) {
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+/* ==========================================================================
+   base styles
+   ========================================================================== */
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	background: #2D2E33 url('../images/mochaGrunge.png') 0 0 repeat;
+}
+
+a {
+	color: @link_color;
+	.hover_transition;
+}
+a:hover{
+	color: @link_color_hover;
+	.hover_transition;
+}
+
+p, h1 {
+	color: @basic_text_color;
+}
+h1 {
+	font-family: 'Wendy One', sans-serif;
+}
+
+li{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+ol, ul {
+	list-style: none;
+}
+
+#header {
+	text-align: center;
+	font-size: 1.8em;
+	margin: 10px;
+}
+#header h1 {
+	margin: 2px;
+	padding: 1%;
+	color: #ccc;
+}
+
+#nav, #main-content{
+	margin: 5%;
+	clear: both;
+}
+
+#hero img{
+	width: 100%;
+}
+
+#nav{
+	padding: 0 0 20px;
+}
+
+#nav li{
+	width: 20%;
+	float: left;
+	margin-right: 4.2%;
+	background: #2C7DDC url('../images/dark_fish_skin.png') 0 0 repeat;
+	text-align: center;
+}
+#nav li a{
+	text-decoration: none;
+	text-shadow: 2px 2px 2px #2D2E33;
+    filter: dropshadow(color=#2D2E33, offx=2, offy=2);
+}
+#nav li h2{
+	margin: 0;
+	font-size: 2.5em;
+}
+
+/* ==========================================================================
+   content
+   ========================================================================== */
+#main-content p {
+	padding-top: 5px;
+	padding-left: 10%;
+	padding-right: 10%;
+	font-size: 1.5em;
+	text-align:center;
+}
+/* ==========================================================================
+   footer
+   ========================================================================== */
+#footer {
+	width: 100%;
+	min-height: 10px;
+}
+#footer p{
+	font-size: 1em;
+	color:#4c4a4a;
+}
+#copyright {
+	text-align: center;
+}
+
+.gradient-a {
+	background-image: linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -o-linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -moz-linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -webkit-linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -ms-linear-gradient(left bottom, rgb(161,161,161) 1%, rgb(26,25,26) 52%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		right top,
+		color-stop(0.01, rgb(161,161,161)),
+		color-stop(0.52, rgb(26,25,26))
+	);
+}
+
+.round-shadow-a {
+	.border-radius(25px);
+	-webkit-box-shadow:  0px 2px 3px 2px #4f4d4d;
+	box-shadow:  0px 2px 3px 2px #4f4d4d;
+}
+.round-shadow-b {
+	.border-radius(5px);
+	-webkit-box-shadow:  0px 2px 5px 5px #4f4d4d;
+	box-shadow:  0px 2px 3px 5px #4f4d4d;
+}
+/* ==========================================================================
+   Media query smaller than 750px and mobile
+   ========================================================================== */
+
+@media screen and (max-device-width: 750px), screen and (max-width: 750px){
+	#header {
+		font-size: 1.1em;
+	}
+	#nav li{
+		width: 44%;
+		float: left;
+		margin-right: 4.2%;
+		margin-bottom: 2%;
+		text-align: center;
+	}
+	#nav li h2{
+		margin: 0;
+		font-size: 2em;
+	}
+	#main-content p {
+		padding-top: 3px;
+		font-size: 1em;
+	}
+	#footer p{
+		font-size: 0.8em;
+	}
+}
+
+/* ==========================================================================
+   Media query smaller than 480px and mobile
+   ========================================================================== */
+
+@media screen and (max-device-width: 480px), screen and (max-width: 480px){
+	#header {
+		font-size: 0.9em;
+	}
+	#nav li{
+		width: 90%;
+		max-height: 40px;
+		float: left;
+		margin-right: 4.2%;
+		margin-bottom: 3%;
+		text-align: center;
+	}
+	#nav li h2{
+		margin: 0;
+		font-size: 1.8em;
+	}
+	#main-content p {
+		padding-top: 1px;
+		font-size: 0.8em;
+	}
+	#footer p{
+		font-size: 0.6em;
+	}
+}
